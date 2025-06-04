@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Web của Plin</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="container">
+                <ul>
+                    <li><a href="/"><img style="width:70px" src="images/logo.png" alt=""></a></li>
+                    <li><a href="/"><i class="fa-solid fa-house"></i>Home</a></li>
+                    <li class="has-dropdown">
+                        <a href="/category"><i class="fas fa-th-large me-1"></i>Category<i class="fa-solid fa-sort-down"></i></a>
+                        <div class="dropdown-menu">
+                            <ul>
+                                <li><a href="/products/category/1"><i class="fas fa-laptop me-1"></i> Electronics</a></li>
+                                <li><a href="/products/category/2"><i class="fas fa-tshirt me-1"></i> Clothing</a></li>
+                                <li><a href="/products/category/3"><i class="fas fa-couch me-1"></i> Furniture</a></li>
+                                <li><a href="/products/category/4"><i class="fa-solid fa-basket-shopping"></i> Groceries</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="#" id="add-product-menu-btn"><i class="fas fa-boxes me-1"></i>Add Product</a></li>
+                    <li>
+                        <input type="text" id="header-search" placeholder="Search for...">
+                        <i class="fa-solid fa-magnifying-glass" id="header-search-btn" style="cursor:pointer"></i>
+                    </li>
+                    <li>
+                        <button id="cart-btn"><i class="fa-solid fa-cart-shopping"></i>Cart<span id="cart-count-badge">0</span></button>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <section>
+            <div class="feature">
+                <div class="feature-col" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-box">
+                        <div><i class="fas fa-truck feature-icon"></i></div>
+                        <h4 class="feature-title">Free Shipping</h4>
+                        <p class="feature-text">On orders over $50</p>
+                    </div>
+                </div>
+                <div class="feature-col" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-box">
+                        <div><i class="fas fa-undo feature-icon"></i></div>
+                        <h4 class="feature-title">Easy Returns</h4>
+                        <p class="feature-text">30-day return policy</p>
+                    </div>
+                </div>
+                <div class="feature-col" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-box">
+                        <div><i class="fas fa-lock feature-icon"></i></div>
+                        <h4 class="feature-title">Secure Payments</h4>
+                        <p class="feature-text">100% secure checkout</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="featured-header">
+                <h2>Featured Products</h2>
+                <button id="view-all-btn" class="btn">View All</button>
+            </div>
+        </section>
+    </header>
+    <main class="content">
+        <div class="container">
+            <div id="featured-products" class="product-grid">
+                <!-- Featured products will be loaded dynamically -->
+                <div class="loading">Loading featured products...</div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <a href="/"><img style="width:70px" src="images/logo.png" alt=""></a>
+                    <p>Empowering your digital presence with elegant and efficient solutions. Quality, speed, and support you can trust.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h5>Quick Links</h5>
+                    <ul>
+                        <li><a href="#"><i class="fas fa-angle-right"></i> Home</a></li>
+                        <li><a href="#"><i class="fas fa-angle-right"></i> Projects</a></li>
+                        <li><a href="#"><i class="fas fa-angle-right"></i> Services</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5>Customer Service</h5>
+                    <ul>
+                        <li><a href="#"><i class="fas fa-envelope"></i> Contact Us</a></li>
+                        <li><a href="#"><i class="fas fa-question-circle"></i> FAQs</a></li>
+                        <li><a href="#"><i class="fas fa-truck"></i> Shipping Info</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5>Contact Us</h5>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> 1 VVN, HoChiMinh City</li>
+                        <li><i class="fas fa-phone"></i> (123) 456-7890 </li>
+                        <li><i class="fas fa-envelope"></i> support@websplin.com</li>
+                    </ul>
+                    <h6 class="payment-title">We Accept</h6>
+                    <div class="payment-icons">
+                        <i class="fab fa-cc-visa me-2 fs-4"></i>
+                        <i class="fab fa-cc-mastercard me-2 fs-4"></i>
+                        <i class="fab fa-cc-amex me-2 fs-4"></i>
+                        <i class="fab fa-cc-paypal me-2 fs-4"></i>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <p class="footer-bottom">&copy; 2025 Web's Plin. All rights reserved.</p>
+        </div>
+    </footer>
+    <!-- Product Modal -->
+    <div id="product-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" style="cursor:pointer;float:right;font-size:24px;">&times;</span>
+            <h2 id="modal-title">Add New Product</h2>
+            <form id="product-form" class="product-form">
+                <input type="hidden" id="product-id">
+                <div class="form-group">
+                    <label for="product-name">Product Name</label>
+                    <input type="text" id="product-name" required placeholder="Enter product name">
+                </div>
+                <div class="form-group">
+                    <label for="product-category">Category</label>
+                    <select id="product-category" required></select>
+                </div>
+                <div class="form-group">
+                    <label for="product-brand">Brand</label>
+                    <input type="text" id="product-brand" required placeholder="Enter brand">
+                </div>
+                <div class="form-group">
+                    <label for="product-featured">Featured Product</label>
+                    <select id="product-featured">
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="product-price">Price</label>
+                    <input type="number" id="product-price" min="0" step="0.01" required placeholder="Enter price">
+                </div>
+                <div class="form-group">
+                    <label for="product-stock">Stock Quantity</label>
+                    <input type="number" id="product-stock" min="0" required placeholder="Enter stock quantity">
+                </div>
+                <div class="form-group full-width">
+                    <label for="product-image">Image URL</label>
+                    <input type="text" id="product-image" placeholder="Enter image URL or leave blank for default">
+                </div>
+                <div class="form-group full-width">
+                    <label for="product-description">Description</label>
+                    <textarea id="product-description" placeholder="Enter product description"></textarea>
+                </div>
+                <div class="form-buttons">
+                    <button type="button" id="cancel-product" class="btn btn-cancel">Cancel</button>
+                    <button type="submit" id="save-product" class="btn btn-primary">Save Product</button>
+                </div>
+                </form>
+        </div>
+    </div>
+    <!-- Cart Modal -->
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 style="font-size:20px; color:#ff69b4; padding-bottom: 10px;">Your Cart</h2>
+                <span class="close-modal" id="close-cart-modal">&times;</span>
+            </div>
+            <div class="cart-body">
+                <div id="cart-items"></div>
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <span>Total: </span>
+                    <span class="total-amount" id="cart-total">0₫</span>
+                </div>
+                <button class="checkout-btn" onclick="checkout()">Pay Now</button>
+            </div>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>
